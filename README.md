@@ -1,6 +1,7 @@
 # Postgres-Avanzado
 Proyecto PostgresSQL Avanzado
 
+![img](./logo.jpeg)
 Autor : Guzman Reyes Marvin Noel
 
 Descripcion :
