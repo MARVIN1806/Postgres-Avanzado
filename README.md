@@ -1,2 +1,13 @@
 # Postgres-Avanzado
-curso de postgres
+Proyecto PostgresSQL Avanzado
+
+Autor : Guzman Reyes Marvin Noel
+
+Descripcion :
+
+
+Caracteristicas:
+
+Requisitos Previos
+
+Instalacio.
