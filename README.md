@@ -153,7 +153,13 @@ desde la siguiente liga https://www.enterprisedb.com/postgresql-tutorial-resourc
 
 # Gestión de usuarios
 Para generar un perfil de usuario es necesario seleccionar la opcion de Login / Group roles
+
 ![img](./generacionrol.PNG)
+
+![img](./crearrol.PNG)
+
+Le asignamos permisos de solo loguin 
+![img](image.png)
 # Creando una copia de seguridad
 
 # Optimizando consultas
