@@ -19,7 +19,7 @@ Descripcion :
 # Proyecto Comunicaciones Seguras
 
 # Diagrama Entidad - Relacion 
-
+![img](./diagrama%20entidad%20relacion.png)
 # Generacion de base de datos comunicaciones
 
 
