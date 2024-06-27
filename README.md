@@ -157,6 +157,8 @@ Para generar un perfil de usuario es necesario seleccionar la opcion de Login / 
 ![img](./generacionrol.PNG)
 
 ![img](./crearrol.PNG)
+asignamos una contraseña para este usuario 
+![pwd](image-1.png)
 
 Le asignamos permisos de solo loguin 
 ![img](image.png)
