@@ -20,7 +20,7 @@ Descripcion :
 
 # Diagrama Entidad - Relacion 
 ![img](./diagrama%20entidad%20relacion.png)
-# Generacion de base de datos comunicaciones
+# Script para Generacion de base de datos comunicaciones
 BEGIN;
 
 
