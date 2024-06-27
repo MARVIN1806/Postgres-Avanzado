@@ -18,8 +18,10 @@ Descripcion :
 
 # Proyecto Comunicaciones Seguras
 
-# Diagrama Entidad - Relacion 
-![img](./diagrama%20entidad%20relacion.png)
+Base de datos para almacenar informacion de mensajeria entre una o mas personas , generacion de grupos para dispercion de mensajes , registro de usuarios y bitacora de registros .
+
+
+
 # Script para Generacion de base de datos comunicaciones
 BEGIN;
 
@@ -138,12 +140,20 @@ END;
 
 
 
+
 # Configuración del entorno SQL
 
+Para la configuracion del entorno se realiza la instalacion de postgresql 15.6 y pgadmin como administrador de las bases de datos 
+desde la siguiente liga https://www.enterprisedb.com/postgresql-tutorial-resources-training-1?uuid=d0ed4d28-191f-4273-b6a9-427ab0b4c448&campaignId=Product_Trial_PostgreSQL_15
+
+
+
 # Diseño de la base de datos
+![img](./diagrama%20entidad%20relacion.png)
 
 # Gestión de usuarios
-
+Para generar un perfil de usuario es necesario seleccionar la opcion de Login / Group roles
+![img](./generacionrol.PNG)
 # Creando una copia de seguridad
 
 # Optimizando consultas
