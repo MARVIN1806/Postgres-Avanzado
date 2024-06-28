@@ -23,7 +23,9 @@ Base de datos para almacenar informacion de mensajeria entre una o mas personas 
 
 
 # Script para Generacion de base de datos comunicaciones
-´´´sql 
+```sql
+
+
 BEGIN;
 
 
@@ -136,7 +138,7 @@ ALTER TABLE IF EXISTS mensajeria.tblmensajes
     NOT VALID;
 
 END;
-´´´
+```
 # Consultas SQL
 
 
