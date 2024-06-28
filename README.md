@@ -188,12 +188,45 @@ Seleccionamos las siguientes opciones de datos.
    
 ![alt text](image-7.png)
 
+# Consultas
+```sql
+SELECT * FROM mensajeria.tbl_usuarios
+ORDER BY idusuario ASC 
 
+SELECT CONCAT (a.nombre,' ', a."apellidoPaterno",' ', a."apellidoMaterno")AS nombre,
+COUNT(b.idusuario_send) AS numero_mensajes
+FROM mensajeria.tbl_usuarios AS a
+JOIN mensajeria.tblmensajes AS b ON a.idusuario = b.idusuario_send
+GROUP BY a.nombre, a."apellidoPaterno", a."apellidoMaterno"
+ORDER BY 2 DESC 
+limit 10
+
+	
+
+SELECT 
+    CONCAT(a.nombre, ' ', a."apellidoPaterno", ' ', a."apellidoMaterno") AS remitente,
+	b.mensaje ,
+    (SELECT CONCAT(nombre, ' ', "apellidoPaterno", ' ', "apellidoMaterno")
+     FROM mensajeria.tbl_usuarios
+     WHERE idusuario = b.idusuario_recieved) AS destinatario
+FROM mensajeria.tbl_usuarios AS a
+JOIN mensajeria.tblmensajes AS b ON a.idusuario = b.idusuario_send
+WHERE b.idusuario_send = '3';
+
+
+SELECT idgrupousuarios, idusuario, idgrupo
+	FROM mensajeria.tblgrupousuario;
+
+
+```
 # Optimizando consultas
+
+
 
 # Preparando un proceso de réplica y alta disponibilidad
 
 # Preparando el monitoreo
+
 
 # Migración de datos
 
