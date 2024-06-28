@@ -160,23 +160,34 @@ Para generar un perfil de usuario es necesario seleccionar la opcion de Login / 
 ![img](./generacionrol.PNG)
 
 ![img](./crearrol.PNG)
-asignamos una contraseña para este usuario 
+
+Asignamos una contraseña para este usuario 
 ![pwd](image-1.png)
 
 Le asignamos permisos de solo loguin 
 ![img](image.png)
 
-guardamos nuestro rol el cual debe aparecer dentro del listado de Login / Group roles
+Guardamos nuestro rol el cual debe aparecer dentro del listado de Login / Group roles
 ![rol](image-2.png)
+
 
 Permisos para consulta de una tabla 
 ![alt text](image-3.png)
 
 # Creando una copia de seguridad
 
-Seleccionamos la base de datos que tenemos para realizar el respaldo
+Seleccionamos la base de datos que tenemos para realizar el respaldo y seleccionamos la opcion backup
 
-generamos a 
+![alt text](image-4.png)
+
+Asignamos un nombre y rol name
+![roles](image-5.png)
+   
+Seleccionamos las siguientes opciones de datos.
+![opciones de datos](image-6.png)
+   
+![alt text](image-7.png)
+
 
 # Optimizando consultas
 
