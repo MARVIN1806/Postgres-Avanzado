@@ -276,4 +276,8 @@ Por lo tanto, es importante ajustar estos valores según tus necesidades especí
 # Migración de datos
 
 Los datos se generaron en mokaro para realizacion de pruebas 
+Es importante realizar un plan de migración para evitar inconsistencia de datos.
 
+1. Fijar fechas para la migración.
+2. Establecer la version de postgres a utilizar 
+3. Realizar pruebas de funcionalidad
