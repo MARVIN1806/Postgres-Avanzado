@@ -214,8 +214,12 @@ JOIN mensajeria.tblmensajes AS b ON a.idusuario = b.idusuario_send
 WHERE b.idusuario_send = '3';
 
 
-SELECT idgrupousuarios, idusuario, idgrupo
-	FROM mensajeria.tblgrupousuario;
+SELECT gm.nombre, count(g.idusuario) AS numero_miebros
+	FROM mensajeria.tblgrupousuario AS g
+	JOIN mensajeria.tblgruposmensajes AS gm ON g.idgrupo = gm.idgrupo
+	GROUP BY gm.nombre
+	ORDER BY 2 DESC
+	LIMIT 3
 
 
 ```
