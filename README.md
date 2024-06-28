@@ -22,7 +22,7 @@ Base de datos para almacenar informacion de mensajeria entre una o mas personas 
 
 # BACKUP  
 
-[Respaldo de base de datos](./bdcomunicaciones28062024.sql)
+[Respaldo de base de datos](bdcomunicaciones28062024.sql)
   bdcomunicaciones28062024.sql
 
 # Script para Generacion de base de datos comunicaciones
