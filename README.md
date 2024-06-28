@@ -169,7 +169,14 @@ Le asignamos permisos de solo loguin
 guardamos nuestro rol el cual debe aparecer dentro del listado de Login / Group roles
 ![rol](image-2.png)
 
+Permisos para consulta de una tabla 
+![alt text](image-3.png)
+
 # Creando una copia de seguridad
+
+Seleccionamos la base de datos que tenemos para realizar el respaldo
+
+generamos a 
 
 # Optimizando consultas
 
