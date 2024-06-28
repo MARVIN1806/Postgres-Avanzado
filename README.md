@@ -224,6 +224,19 @@ SELECT gm.nombre, count(g.idusuario) AS numero_miebros
 
 ```
 # Optimizando consultas
+```sql
+	EXPLAIN SELECT *
+	FROM  mensajeria.tbl_usuarios WHERE nombre='Cleon' and "apellidoPaterno"='Mealiffe'
+```
+    ![alt text](image-8.png)
+
+
+Creo el index de la tabla de usuarios por nombre y apellido paterno 
+
+```sql
+	CREATE INDEX idx_nombreapellidop ON mensajeria.tbl_usuarios(nombre, "apellidoPaterno");
+
+```
 
 
 
@@ -232,6 +245,8 @@ SELECT gm.nombre, count(g.idusuario) AS numero_miebros
 # Preparando el monitoreo
 
 
+
 # Migración de datos
 
+Los datos se generaron en mokaro para realizacion de pruebas 
 
