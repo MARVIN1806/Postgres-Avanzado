@@ -199,7 +199,7 @@ FROM mensajeria.tbl_usuarios AS a
 JOIN mensajeria.tblmensajes AS b ON a.idusuario = b.idusuario_send
 GROUP BY a.nombre, a."apellidoPaterno", a."apellidoMaterno"
 ORDER BY 2 DESC 
-limit 10
+limit 10;
 
 	
 
@@ -219,8 +219,10 @@ SELECT gm.nombre, count(g.idusuario) AS numero_miebros
 	JOIN mensajeria.tblgruposmensajes AS gm ON g.idgrupo = gm.idgrupo
 	GROUP BY gm.nombre
 	ORDER BY 2 DESC
-	LIMIT 3
+	LIMIT 3;
 
+SELECT CONCAT(nombre, ' ', "apellidoPaterno", ' ', "apellidoMaterno") AS usuario, expediente,email
+	FROM  mensajeria.tbl_usuarios WHERE nombre='Cleon' and "apellidoPaterno"='Mealiffe';
 
 ```
 # Optimizando consultas
@@ -245,6 +247,27 @@ Se realiza el analisis de la consulta despues de crear el indice
 
 
 # Preparando un proceso de réplica y alta disponibilidad
+Es necesario generar un proceso de replica de nuestras base de datos para grantizar la integridad y disponibilidad  de la informacion,
+la cual se puden realizar meediante la generacion de respaldos automaticos en diferentes servidores.
+
+Este proceso se puede realizar generando la configuracion  en el archivo de postgresql.conf 
+```sql
+	wal_level = replica
+    max_wal_senders = 5
+    wal_keep_size = 64MB
+
+```
+Dichos parametros se describen a continuación 
+
+wal_level: Este parámetro determina cuánta información se escribe en el registro de transacciones (WAL, por sus siglas en inglés). El valor predeterminado es “replica”, lo que significa que se escribe suficiente información para admitir la replicación y el archivado del WAL. También permite ejecutar consultas de solo lectura en un servidor en espera. Si se establece en “minimal”, se eliminará todo el registro, excepto la información necesaria para recuperarse de un bloqueo o apagado inmediato.
+
+max_wal_senders: Este parámetro especifica el número máximo de conexiones concurrentes desde servidores en espera o clientes de copia de seguridad de base de datos de transmisión (es decir, el número máximo de procesos de envío de WAL que se ejecutan simultáneamente). El valor predeterminado es 10, y si se establece en 0, la replicación está deshabilitada. Asegúrate de configurarlo en el servidor primario con el mismo valor o superior al del servidor primario para permitir consultas en el servidor en espera2.
+
+
+wal_keep_size: Este parámetro especifica el tamaño mínimo de los segmentos de archivo de registro anteriores que se mantienen en el directorio pg_wal, en caso de que un servidor en espera necesite recuperarlos para la replicación en streaming. Si el valor de wal_keep_size es mayor que el valor de max_wal_size, y el servidor en espera está retrasado en la replicación, podría haber problemas. 
+
+Por lo tanto, es importante ajustar estos valores según tus necesidades específicas
+
 
 # Preparando el monitoreo
 
