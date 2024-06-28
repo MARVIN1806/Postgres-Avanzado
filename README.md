@@ -238,6 +238,10 @@ Creo el index de la tabla de usuarios por nombre y apellido paterno
 
 ```
 
+Se realiza el analisis de la consulta despues de crear el indice
+
+![alt text](image-9.png)
+
 
 
 # Preparando un proceso de réplica y alta disponibilidad
