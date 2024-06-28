@@ -23,6 +23,7 @@ Base de datos para almacenar informacion de mensajeria entre una o mas personas 
 
 
 # Script para Generacion de base de datos comunicaciones
+´´´sql 
 BEGIN;
 
 
@@ -135,7 +136,7 @@ ALTER TABLE IF EXISTS mensajeria.tblmensajes
     NOT VALID;
 
 END;
-
+´´´
 # Consultas SQL
 
 
@@ -162,6 +163,10 @@ asignamos una contraseña para este usuario
 
 Le asignamos permisos de solo loguin 
 ![img](image.png)
+
+guardamos nuestro rol el cual debe aparecer dentro del listado de Login / Group roles
+![rol](image-2.png)
+
 # Creando una copia de seguridad
 
 # Optimizando consultas
