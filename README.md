@@ -270,6 +270,10 @@ Por lo tanto, es importante ajustar estos valores según tus necesidades especí
 
 
 # Preparando el monitoreo
+Monitoreo de la base de datos es de gran importancia para verificar la funcionalidad efectiva
+1. Generar monitoreo de consultas
+2. Mantenimiento a traves de Vacumm
+
 
 
 
